@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        h1{
+            margin: 20px 0 0 0;
+        }
+        body{
+            background: rgb(58, 201, 233);
+        }
+        #container{
+            display: none;
+            place-items: center;
+            border:2px solid black;
+            margin:40px 40px 0 40px;
+            padding: 30px;
+            background: rgb(215, 239, 150);
+        }
+        #self{
+            height: 25px;
+            width:200px;
+            margin: 10px 0 10px 0;
+            border-radius:7px;
+        }
+        .button{
+            width: 100px;
+            height:30px;
+            text-align: center;
+            text-transform:uppercase;
+            margin: 0 30px 0 0;
+            border-radius:7px;
+            font-weight: bold;
+
+        }
+        select{
+            width: 100px;
+            height: 25px;
+        }
+        #toggle{
+            width: 150px;
+            height:35px;
+            margin: 10px 0 0 20px;
+            font-size:15px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">Registration form</h1>
+    <button id="toggle">Click here to Display</button>
+    <div id="container">
+        <form action="">
+            <label for="name" >Enter your Name:</label><br>
+            <input type="text" id="self"><br>
+            <label for="password">Enter your Password:</label><br>
+            <input type="password" name="password" id="self"><br>
+            <label for="email">Enter your Email:</label><br>
+            <input type="email" id="self"><br>
+            <label for="">Select Your Course:</label>
+            <label for="course"><input type="checkbox" name="course" id="course">BCA</label>
+            <label for="course"><input type="checkbox" name="course" id="course">BCOM</label>
+            <label for="course"><input type="checkbox" name="course" id="course">BBA</label><br><br>
+            <label for="sex">Sex:</label>
+            <label for=""><input type="radio" name="sex" id="">Male</label>
+            <label for=""><input type="radio" name="sex" id="">Female</label><br><br>
+            <strong>Select the Account you use the most:</strong>
+            <select name="account" id="account">
+                <option value="3">Facebook</option>
+                <option value="2">Instagram</option>
+                <option value="1">Youtube</option>
+            </select><br><br>
+            <label for="">Do you have any Suggestions??</label><br><br>
+            <textarea name="" id="" cols="60" rows="8">typing...</textarea><br><br>
+            <strong>Click here to submit or reset the form</strong><br><br>
+            <input type="submit" value="submit" id="submit" class="button">
+            <input type="reset" name="" id="reset" value="reset" class="button">
+        </form>
+
+    </div>
+    <script>
+        btn= document.getElementById("toggle");
+        div= document.getElementById("container");
+        btn.onclick = () =>
+        {
+            if(div.style.diplay !=="none")
+            div.style.display="grid";
+        }
+    </script>
+    
+</body>
+</html>

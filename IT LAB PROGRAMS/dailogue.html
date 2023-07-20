@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dailogue Box</title>
+    <style>
+        #btn
+        {
+            width: 150px;
+            height: 40px;
+            margin: 100px 0 0 100px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn" onclick="sum()">Calculate SUM</button>
+    <script>
+        let s=0,i;
+        btn = document.getElementById("btn");
+            function sum() {
+                n = window.prompt("Enter a Number:");
+                n=parseInt(n);
+                for(i=1;i<=n;i++)
+                s = s + i; 
+                alert(`Sum of Numbers upto ${n} is: ${s}`);
+                response=confirm("Happy with the output!!");
+                if(response==true)
+                {
+                    alert("Happy");
+                    return true;
+                }
+                else
+                {
+                    alert("Sorry");
+                    return false;
+                }
+            }
+    </script>
+    
+</body>
+</html>
